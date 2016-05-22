@@ -1,0 +1,61 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/bin/nodejs', '/usr/bin/npm', 'install', 'materialize' ]
+2 info using npm@1.3.10
+3 info using node@v0.10.25
+4 verbose cache add [ 'materialize', null ]
+5 verbose cache add name=undefined spec="materialize" args=["materialize",null]
+6 verbose parsed url { protocol: null,
+6 verbose parsed url   slashes: null,
+6 verbose parsed url   auth: null,
+6 verbose parsed url   host: null,
+6 verbose parsed url   port: null,
+6 verbose parsed url   hostname: null,
+6 verbose parsed url   hash: null,
+6 verbose parsed url   search: null,
+6 verbose parsed url   query: null,
+6 verbose parsed url   pathname: 'materialize',
+6 verbose parsed url   path: 'materialize',
+6 verbose parsed url   href: 'materialize' }
+7 silly lockFile ba290e45-materialize materialize
+8 verbose lock materialize /home/paul/.npm/ba290e45-materialize.lock
+9 silly lockFile ba290e45-materialize materialize
+10 silly lockFile ba290e45-materialize materialize
+11 verbose addNamed [ 'materialize', '' ]
+12 verbose addNamed [ null, '*' ]
+13 silly lockFile 5d3d9b25-materialize materialize@
+14 verbose lock materialize@ /home/paul/.npm/5d3d9b25-materialize.lock
+15 silly addNameRange { name: 'materialize', range: '*', hasData: false }
+16 verbose url raw materialize
+17 verbose url resolving [ 'https://registry.npmjs.org/', './materialize' ]
+18 verbose url resolved https://registry.npmjs.org/materialize
+19 info trying registry request attempt 1 at 15:37:34
+20 http GET https://registry.npmjs.org/materialize
+21 info retry will retry, error on last attempt: Error: SELF_SIGNED_CERT_IN_CHAIN
+22 info trying registry request attempt 2 at 15:37:44
+23 http GET https://registry.npmjs.org/materialize
+24 info retry will retry, error on last attempt: Error: SELF_SIGNED_CERT_IN_CHAIN
+25 info trying registry request attempt 3 at 15:38:45
+26 http GET https://registry.npmjs.org/materialize
+27 silly lockFile 5d3d9b25-materialize materialize@
+28 silly lockFile 5d3d9b25-materialize materialize@
+29 error Error: SELF_SIGNED_CERT_IN_CHAIN
+29 error     at SecurePair.<anonymous> (tls.js:1370:32)
+29 error     at SecurePair.EventEmitter.emit (events.js:92:17)
+29 error     at SecurePair.maybeInitFinished (tls.js:982:10)
+29 error     at CleartextStream.read [as _read] (tls.js:469:13)
+29 error     at CleartextStream.Readable.read (_stream_readable.js:320:10)
+29 error     at EncryptedStream.write [as _write] (tls.js:366:25)
+29 error     at doWrite (_stream_writable.js:223:10)
+29 error     at writeOrBuffer (_stream_writable.js:213:5)
+29 error     at EncryptedStream.Writable.write (_stream_writable.js:180:11)
+29 error     at write (_stream_readable.js:583:24)
+30 error If you need help, you may report this log at:
+30 error     <http://github.com/isaacs/npm/issues>
+30 error or email it to:
+30 error     <npm-@googlegroups.com>
+31 error System Linux 3.16.0-30-generic
+32 error command "/usr/bin/nodejs" "/usr/bin/npm" "install" "materialize"
+33 error cwd /home/paul/David-Paul/Survivalutionism
+34 error node -v v0.10.25
+35 error npm -v 1.3.10
+36 verbose exit [ 1, true ]
