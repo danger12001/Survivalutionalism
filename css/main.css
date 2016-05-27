@@ -91,10 +91,14 @@ body{
     margin-left: auto;
     margin-right: auto;
 
+<<<<<<< HEAD
 background-image:url(/images/background1.jpg);
 
 
 
+=======
+background-image: url(/images/background1.jpg);
+>>>>>>> 669ae4082b130a4ed24dd2f30d892b1fa44c7fc4
 
 }
 
