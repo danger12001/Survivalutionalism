@@ -7,14 +7,14 @@
 
 
 
-h1{
+h1{ color: white;
     text-decoration: underline;
     text-align: center;
     padding: 10px;
     font-family: fantasy;
 }
 
-p{
+p{  color: white;
     padding: 15px;
     text-align: center;
     font-family: sans-serif;
@@ -31,7 +31,7 @@ p{
 
 }
 .galleryImg{
-    border: 2px solid black;
+    border: 4px solid black;
      height: 322px;
     width: 100%;
 
@@ -51,13 +51,11 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f5f6f6', end
 {
     margin-top: 30px;
     margin-bottom: 40px;
-   border: 3.5px solid black;
- /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f5f6f6+0,dbdce2+41,b8bac6+100,dddfe3+100,f5f6f6+100,dddfe3+100 */
-background: rgb(245,246,246); /* Old browsers */
-background: -moz-linear-gradient(left,  rgba(245,246,246,1) 0%, rgba(219,220,226,1) 41%, rgba(184,186,198,1) 100%, rgba(221,223,227,1) 100%, rgba(245,246,246,1) 100%, rgba(221,223,227,1) 100%); /* FF3.6-15 */
-background: -webkit-linear-gradient(left,  rgba(245,246,246,1) 0%,rgba(219,220,226,1) 41%,rgba(184,186,198,1) 100%,rgba(221,223,227,1) 100%,rgba(245,246,246,1) 100%,rgba(221,223,227,1) 100%); /* Chrome10-25,Safari5.1-6 */
-background: linear-gradient(to right,  rgba(245,246,246,1) 0%,rgba(219,220,226,1) 41%,rgba(184,186,198,1) 100%,rgba(221,223,227,1) 100%,rgba(245,246,246,1) 100%,rgba(221,223,227,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f5f6f6', endColorstr='#dddfe3',GradientType=1 ); /* IE6-9 */
+   border: 3.5px solid white;
+    color: white;
+    background-color: black;
+
+
 
 
     width: 85%;
@@ -89,13 +87,11 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f5f6f6', end
 
 
 body{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 
-/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,e8e8e8+100 */
-background: rgb(255,255,255); /* Old browsers */
-background: -moz-linear-gradient(left,  rgba(255,255,255,1) 0%, rgba(232,232,232,1) 100%); /* FF3.6-15 */
-background: -webkit-linear-gradient(left,  rgba(255,255,255,1) 0%,rgba(232,232,232,1) 100%); /* Chrome10-25,Safari5.1-6 */
-background: linear-gradient(to right,  rgba(255,255,255,1) 0%,rgba(232,232,232,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e8e8e8',GradientType=1 ); /* IE6-9 */
+background-image:url(/images/background1.jpg);
 
 
 
@@ -109,8 +105,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
 .logo{
     margin-top: 50px;
     margin-bottom: 50px;
-    height: 500px;
-    width: 500px;
+    height: 250px;
+    width: 250px;
     display:block;
      margin-left:auto;
      margin-right:auto;
@@ -164,7 +160,8 @@ border: 1px solid black;
   /*width: 10%;*/
 }
 #calenderBlock {
-  border: 1px solid black;
+    color: white;
+  border: 1px solid white;
   height: 150px;
   width: 14.2857142857%;
   /*display: inline-block;*/
@@ -239,8 +236,14 @@ border: 1px solid black;
   text-align: center;
 }
 .calender-container {
-width: 100%;
-  /*border: 5px solid black;*/
+    border: 10px solid white;
+    border-radius: 5px;
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    background-color: black;
+  
 }
 .calender {
 width: 100%;
