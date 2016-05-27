@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
+<link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32" />
   <title>Survivalutionisism</title>
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
   <link href="css/main.css" type="text/css" rel="stylesheet">
       <link rel="stylesheet" href="css/social-share-kit.css" type="text/css">
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
 </head>
 <body>
   <nav>
@@ -20,254 +22,853 @@
       </ul>
     </div>
   </nav>
-  <img src="images/logo.jpg" class="logo"></div>
-<h1 >Events:</h1>
-<button id="event" onClick="cascade()" class="btn">Add Event</button>
-<div id="calender-container" class="row">
-<div id="inputContainer" >
-  <form>
-  <label class="active" for="eventName"  >Event Name:</label>
-<input id="eventName"  class="inputBox" maxlength="50" type="text" required>
-<label class="active col s6" for="date" >Date:</label>
-<label class="active col s3" for="hour">hh</label>
-<label class="active col s3" for="minute">mm</label>
-<input id="date" type="date" class="datepicker col s6" maxlength="8" required>
-<input id="hour" class="col s3" maxlength="2" required>
-<input id="minute" class="col s3" maxlength="2" required>
-<label class="active col s12" for="location" >Location: </label>
-<input id="location"  class="col s12" maxlength="50" required> <button class="btn col s6" id="search" onClick="initialize()"> Search </button>
-<button class="btn col s6" id="addMarker">Add Marker</button>
-<div id="map_canvas" class="col s12"></div>
-<label class="active col s12"  for="desc" >Description:</label>
-<input id="desc" maxlength="210"  required="">
-<input type="submit" class="btn" id="submit"></button>
-</form>
+
+      <img src="images/logo.jpg"  class="logo responsive-img"></div>
+
+
+
+<div class="calender-container">
+<div id="monthBar" class="grey darken-2 row"><a id="Previous" class="btn col s4"><</a><div class="col s4" id="Cmonth">May 2016</div><a id="Next" class="btn col s4">></a></div>
+<div id="Cjan" class="row calender">
+<div id="calenderHead" class="col s2">Monday</div>
+<div id="calenderHead" class="col s2">Tuesday</div>
+<div id="calenderHead" class="col s2">Wednesday</div>
+<div id="calenderHead" class="col s2">Thursday</div>
+<div id="calenderHead" class="col s2">Friday</div>
+<div id="calenderHead" class="col s1">Saturday</div>
+<div id="calenderHead" class="col s1">Sunday</div>
+
+<div id="calenderBlock" class="col s2"></div>
+<div id="calenderBlock" class="col s2"></div>
+<div id="calenderBlock" class="col s2"></div>
+<div id="calenderBlock" class="col s2"></div>
+<div id="calenderBlock" class="col s2">1</div>
+<div id="calenderBlock" class="col s1">2</div>
+<div id="calenderBlock" class="col s1">3</div>
+
+<div id="calenderBlock" class="col s2">4</div>
+<div id="calenderBlock" class="col s2">5</div>
+<div id="calenderBlock" class="col s2">6</div>
+<div id="calenderBlock" class="col s2">7</div>
+<div id="calenderBlock" class="col s2">8</div>
+<div id="calenderBlock" class="col s1">9</div>
+<div id="calenderBlock" class="col s1">10</div>
+
+<div id="calenderBlock" class="col s2">11</div>
+<div id="calenderBlock" class="col s2">12</div>
+<div id="calenderBlock" class="col s2">13</div>
+<div id="calenderBlock" class="col s2">14</div>
+<div id="calenderBlock" class="col s2">15</div>
+<div id="calenderBlock" class="col s1">16</div>
+<div id="calenderBlock" class="col s1">17</div>
+
+<div id="calenderBlock" class="col s2">18</div>
+<div id="calenderBlock" class="col s2">19</div>
+<div id="calenderBlock" class="col s2">20</div>
+<div id="calenderBlock" class="col s2">21</div>
+<div id="calenderBlock" class="col s2">22</div>
+<div id="calenderBlock" class="col s1">23</div>
+<div id="calenderBlock" class="col s1">24</div>
+
+<div id="calenderBlock" class="col s2">25</div>
+<div id="calenderBlock" class="col s2">26</div>
+<div id="calenderBlock" class="col s2">27</div>
+<div id="calenderBlock" class="col s2">28</div>
+<div id="calenderBlock" class="col s2">29</div>
+<div id="calenderBlock" class="col s1">30</div>
+<div id="calenderBlock" class="col s1">31</div>
+</div>
+
+<div id="Cfeb" class="row calender">
+<div id="calenderHead" class="col s2">Monday</div>
+<div id="calenderHead" class="col s2">Tuesday</div>
+<div id="calenderHead" class="col s2">Wednesday</div>
+<div id="calenderHead" class="col s2">Thursday</div>
+<div id="calenderHead" class="col s2">Friday</div>
+<div id="calenderHead" class="col s1">Saturday</div>
+<div id="calenderHead" class="col s1">Sunday</div>
+
+<div id="calenderBlock" class="col s2">1</div>
+<div id="calenderBlock" class="col s2">2</div>
+<div id="calenderBlock" class="col s2">3</div>
+<div id="calenderBlock" class="col s2">4</div>
+<div id="calenderBlock" class="col s2">5</div>
+<div id="calenderBlock" class="col s1">6</div>
+<div id="calenderBlock" class="col s1">7</div>
+
+<div id="calenderBlock" class="col s2">8</div>
+<div id="calenderBlock" class="col s2">9</div>
+<div id="calenderBlock" class="col s2">10</div>
+<div id="calenderBlock" class="col s2">11</div>
+<div id="calenderBlock" class="col s2">12</div>
+<div id="calenderBlock" class="col s1">13</div>
+<div id="calenderBlock" class="col s1">14</div>
+
+<div id="calenderBlock" class="col s2">15</div>
+<div id="calenderBlock" class="col s2">16</div>
+<div id="calenderBlock" class="col s2">17</div>
+<div id="calenderBlock" class="col s2">18</div>
+<div id="calenderBlock" class="col s2">19</div>
+<div id="calenderBlock" class="col s1">20</div>
+<div id="calenderBlock" class="col s1">21</div>
+
+<div id="calenderBlock" class="col s2">22</div>
+<div id="calenderBlock" class="col s2">23</div>
+<div id="calenderBlock" class="col s2">24</div>
+<div id="calenderBlock" class="col s2">25</div>
+<div id="calenderBlock" class="col s2">26</div>
+<div id="calenderBlock" class="col s1">27</div>
+<div id="calenderBlock" class="col s1">28</div>
+
+<div id="calenderBlock" class="col s2">29</div>
+<div id="calenderBlock" class="col s2"></div>
+<div id="calenderBlock" class="col s2"></div>
+<div id="calenderBlock" class="col s2"></div>
+<div id="calenderBlock" class="col s2"></div>
+<div id="calenderBlock" class="col s1"></div>
+<div id="calenderBlock" class="col s1"></div>
+</div>
+
+<div id="Cmar" class="row calender">
+<div id="calenderHead" class="col s2">Monday</div>
+<div id="calenderHead" class="col s2">Tuesday</div>
+<div id="calenderHead" class="col s2">Wednesday</div>
+<div id="calenderHead" class="col s2">Thursday</div>
+<div id="calenderHead" class="col s2">Friday</div>
+<div id="calenderHead" class="col s1">Saturday</div>
+<div id="calenderHead" class="col s1">Sunday</div>
+
+<div id="calenderBlock" class="col s2"></div>
+<div id="calenderBlock" class="col s2">1</div>
+<div id="calenderBlock" class="col s2">2</div>
+<div id="calenderBlock" class="col s2">3</div>
+<div id="calenderBlock" class="col s2">4</div>
+<div id="calenderBlock" class="col s1">5</div>
+<div id="calenderBlock" class="col s1">6</div>
+
+<div id="calenderBlock" class="col s2">7</div>
+<div id="calenderBlock" class="col s2">8</div>
+<div id="calenderBlock" class="col s2">9</div>
+<div id="calenderBlock" class="col s2">10</div>
+<div id="calenderBlock" class="col s2">11</div>
+<div id="calenderBlock" class="col s1">12</div>
+<div id="calenderBlock" class="col s1">13</div>
+
+<div id="calenderBlock" class="col s2">14</div>
+<div id="calenderBlock" class="col s2">15</div>
+<div id="calenderBlock" class="col s2">16</div>
+<div id="calenderBlock" class="col s2">17</div>
+<div id="calenderBlock" class="col s2">18</div>
+<div id="calenderBlock" class="col s1">19</div>
+<div id="calenderBlock" class="col s1">20</div>
+
+<div id="calenderBlock" class="col s2">21</div>
+<div id="calenderBlock" class="col s2">22</div>
+<div id="calenderBlock" class="col s2">23</div>
+<div id="calenderBlock" class="col s2">24</div>
+<div id="calenderBlock" class="col s2">25</div>
+<div id="calenderBlock" class="col s1">26</div>
+<div id="calenderBlock" class="col s1">27</div>
+
+<div id="calenderBlock" class="col s2">28</div>
+<div id="calenderBlock" class="col s2">29</div>
+<div id="calenderBlock" class="col s2">30</div>
+<div id="calenderBlock" class="col s2">31</div>
+<div id="calenderBlock" class="col s2"></div>
+<div id="calenderBlock" class="col s1"></div>
+<div id="calenderBlock" class="col s1"></div>
+</div>
+
+<div id="Capr" class="row calender">
+<div id="calenderHead" class="col s2">Monday</div>
+<div id="calenderHead" class="col s2">Tuesday</div>
+<div id="calenderHead" class="col s2">Wednesday</div>
+<div id="calenderHead" class="col s2">Thursday</div>
+<div id="calenderHead" class="col s2">Friday</div>
+<div id="calenderHead" class="col s1">Saturday</div>
+<div id="calenderHead" class="col s1">Sunday</div>
+
+<div id="calenderBlock" class="col s2"></div>
+<div id="calenderBlock" class="col s2"></div>
+<div id="calenderBlock" class="col s2"></div>
+<div id="calenderBlock" class="col s2"></div>
+<div id="calenderBlock" class="col s2">1</div>
+<div id="calenderBlock" class="col s1">2</div>
+<div id="calenderBlock" class="col s1">3</div>
+
+<div id="calenderBlock" class="col s2">4</div>
+<div id="calenderBlock" class="col s2">5</div>
+<div id="calenderBlock" class="col s2">6</div>
+<div id="calenderBlock" class="col s2">7</div>
+<div id="calenderBlock" class="col s2">8</div>
+<div id="calenderBlock" class="col s1">9</div>
+<div id="calenderBlock" class="col s1">10</div>
+
+<div id="calenderBlock" class="col s2">11</div>
+<div id="calenderBlock" class="col s2">12</div>
+<div id="calenderBlock" class="col s2">13</div>
+<div id="calenderBlock" class="col s2">14</div>
+<div id="calenderBlock" class="col s2">15</div>
+<div id="calenderBlock" class="col s1">16</div>
+<div id="calenderBlock" class="col s1">17</div>
+
+<div id="calenderBlock" class="col s2">18</div>
+<div id="calenderBlock" class="col s2">19</div>
+<div id="calenderBlock" class="col s2">20</div>
+<div id="calenderBlock" class="col s2">21</div>
+<div id="calenderBlock" class="col s2">22</div>
+<div id="calenderBlock" class="col s1">23</div>
+<div id="calenderBlock" class="col s1">24</div>
+
+<div id="calenderBlock" class="col s2">25</div>
+<div id="calenderBlock" class="col s2">26</div>
+<div id="calenderBlock" class="col s2">27</div>
+<div id="calenderBlock" class="col s2">28</div>
+<div id="calenderBlock" class="col s2">29</div>
+<div id="calenderBlock" class="col s1">30</div>
+<div id="calenderBlock" class="col s1"></div>
+</div>
+
+<div id="Cmay" class="row calender">
+<div id="calenderHead" class="col s2">Monday</div>
+<div id="calenderHead" class="col s2">Tuesday</div>
+<div id="calenderHead" class="col s2">Wednesday</div>
+<div id="calenderHead" class="col s2">Thursday</div>
+<div id="calenderHead" class="col s2">Friday</div>
+<div id="calenderHead" class="col s1">Saturday</div>
+<div id="calenderHead" class="col s1">Sunday</div>
+
+<div id="calenderBlock" class="col s2"></div>
+<div id="calenderBlock" class="col s2"></div>
+<div id="calenderBlock" class="col s2"></div>
+<div id="calenderBlock" class="col s2"></div>
+<div id="calenderBlock" class="col s2"></div>
+<div id="calenderBlock" class="col s1"></div>
+<div id="calenderBlock" class="col s1">1<div>Test</div></div>
+
+<div id="calenderBlock" class="col s2">2</div>
+<div id="calenderBlock" class="col s2">3</div>
+<div id="calenderBlock" class="col s2">4</div>
+<div id="calenderBlock" class="col s2">5</div>
+<div id="calenderBlock" class="col s2">6</div>
+<div id="calenderBlock" class="col s1">7</div>
+<div id="calenderBlock" class="col s1">8</div>
+
+<div id="calenderBlock" class="col s2">9</div>
+<div id="calenderBlock" class="col s2">10</div>
+<div id="calenderBlock" class="col s2">11</div>
+<div id="calenderBlock" class="col s2">12</div>
+<div id="calenderBlock" class="col s2">13</div>
+<div id="calenderBlock" class="col s1">14</div>
+<div id="calenderBlock" class="col s1">15</div>
+
+<div id="calenderBlock" class="col s2">16</div>
+<div id="calenderBlock" class="col s2">17</div>
+<div id="calenderBlock" class="col s2">18</div>
+<div id="calenderBlock" class="col s2">19</div>
+<div id="calenderBlock" class="col s2">20</div>
+<div id="calenderBlock" class="col s1">21</div>
+<div id="calenderBlock" class="col s1">22</div>
+
+<div id="calenderBlock" class="col s2">23</div>
+<div id="calenderBlock" class="col s2">24</div>
+<div id="calenderBlock" class="col s2">25</div>
+<div id="calenderBlock" class="col s2">26</div>
+<div id="calenderBlock" class="col s2">27</div>
+<div id="calenderBlock" class="col s1">28</div>
+<div id="calenderBlock" class="col s1">29</div>
+
+<div id="calenderBlock" class="col s2">30</div>
+<div id="calenderBlock" class="col s2">31</div>
+<div id="calenderBlock" class="col s2"></div>
+<div id="calenderBlock" class="col s2"></div>
+<div id="calenderBlock" class="col s2"></div>
+<div id="calenderBlock" class="col s1"></div>
+<div id="calenderBlock" class="col s1"></div>
+</div>
+
+<div id="Cjun" class="row calender">
+<div id="calenderHead" class="col s2">Monday</div>
+<div id="calenderHead" class="col s2">Tuesday</div>
+<div id="calenderHead" class="col s2">Wednesday</div>
+<div id="calenderHead" class="col s2">Thursday</div>
+<div id="calenderHead" class="col s2">Friday</div>
+<div id="calenderHead" class="col s1">Saturday</div>
+<div id="calenderHead" class="col s1">Sunday</div>
+
+<div id="calenderBlock" class="col s2"></div>
+<div id="calenderBlock" class="col s2"></div>
+<div id="calenderBlock" class="col s2">1</div>
+<div id="calenderBlock" class="col s2">2</div>
+<div id="calenderBlock" class="col s2">3</div>
+<div id="calenderBlock" class="col s1">4</div>
+<div id="calenderBlock" class="col s1">5</div>
+
+<div id="calenderBlock" class="col s2">6</div>
+<div id="calenderBlock" class="col s2">7</div>
+<div id="calenderBlock" class="col s2">8</div>
+<div id="calenderBlock" class="col s2">9</div>
+<div id="calenderBlock" class="col s2">10</div>
+<div id="calenderBlock" class="col s1">11</div>
+<div id="calenderBlock" class="col s1">12</div>
+
+<div id="calenderBlock" class="col s2">13</div>
+<div id="calenderBlock" class="col s2">14</div>
+<div id="calenderBlock" class="col s2">15</div>
+<div id="calenderBlock" class="col s2">16</div>
+<div id="calenderBlock" class="col s2">17</div>
+<div id="calenderBlock" class="col s1">18</div>
+<div id="calenderBlock" class="col s1">19</div>
+
+<div id="calenderBlock" class="col s2">20</div>
+<div id="calenderBlock" class="col s2">21</div>
+<div id="calenderBlock" class="col s2">22</div>
+<div id="calenderBlock" class="col s2">23</div>
+<div id="calenderBlock" class="col s2">24</div>
+<div id="calenderBlock" class="col s1">25</div>
+<div id="calenderBlock" class="col s1">26</div>
+
+<div id="calenderBlock" class="col s2">27</div>
+<div id="calenderBlock" class="col s2">28</div>
+<div id="calenderBlock" class="col s2">29</div>
+<div id="calenderBlock" class="col s2">30</div>
+<div id="calenderBlock" class="col s2"></div>
+<div id="calenderBlock" class="col s1"></div>
+<div id="calenderBlock" class="col s1"></div>
+</div>
+
+<div id="Cjul" class="row calender">
+<div id="calenderHead" class="col s2">Monday</div>
+<div id="calenderHead" class="col s2">Tuesday</div>
+<div id="calenderHead" class="col s2">Wednesday</div>
+<div id="calenderHead" class="col s2">Thursday</div>
+<div id="calenderHead" class="col s2">Friday</div>
+<div id="calenderHead" class="col s1">Saturday</div>
+<div id="calenderHead" class="col s1">Sunday</div>
+
+<div id="calenderBlock" class="col s2"></div>
+<div id="calenderBlock" class="col s2"></div>
+<div id="calenderBlock" class="col s2"></div>
+<div id="calenderBlock" class="col s2"></div>
+<div id="calenderBlock" class="col s2">1</div>
+<div id="calenderBlock" class="col s1">2</div>
+<div id="calenderBlock" class="col s1">3</div>
+
+<div id="calenderBlock" class="col s2">4</div>
+<div id="calenderBlock" class="col s2">5</div>
+<div id="calenderBlock" class="col s2">6</div>
+<div id="calenderBlock" class="col s2">7</div>
+<div id="calenderBlock" class="col s2">8</div>
+<div id="calenderBlock" class="col s1">9</div>
+<div id="calenderBlock" class="col s1">10</div>
+
+<div id="calenderBlock" class="col s2">11</div>
+<div id="calenderBlock" class="col s2">12</div>
+<div id="calenderBlock" class="col s2">13</div>
+<div id="calenderBlock" class="col s2">14</div>
+<div id="calenderBlock" class="col s2">15</div>
+<div id="calenderBlock" class="col s1">16</div>
+<div id="calenderBlock" class="col s1">17</div>
+
+<div id="calenderBlock" class="col s2">18</div>
+<div id="calenderBlock" class="col s2">19</div>
+<div id="calenderBlock" class="col s2">20</div>
+<div id="calenderBlock" class="col s2">21</div>
+<div id="calenderBlock" class="col s2">22</div>
+<div id="calenderBlock" class="col s1">23</div>
+<div id="calenderBlock" class="col s1">24</div>
+
+<div id="calenderBlock" class="col s2">25</div>
+<div id="calenderBlock" class="col s2">26</div>
+<div id="calenderBlock" class="col s2">27</div>
+<div id="calenderBlock" class="col s2">28</div>
+<div id="calenderBlock" class="col s2">29</div>
+<div id="calenderBlock" class="col s1">30</div>
+<div id="calenderBlock" class="col s1">31</div>
+</div>
+
+<div id="Caug" class="row calender">
+<div id="calenderHead" class="col s2">Monday</div>
+<div id="calenderHead" class="col s2">Tuesday</div>
+<div id="calenderHead" class="col s2">Wednesday</div>
+<div id="calenderHead" class="col s2">Thursday</div>
+<div id="calenderHead" class="col s2">Friday</div>
+<div id="calenderHead" class="col s1">Saturday</div>
+<div id="calenderHead" class="col s1">Sunday</div>
+
+<div id="calenderBlock" class="col s2">1</div>
+<div id="calenderBlock" class="col s2">2</div>
+<div id="calenderBlock" class="col s2">3</div>
+<div id="calenderBlock" class="col s2">4</div>
+<div id="calenderBlock" class="col s2">5</div>
+<div id="calenderBlock" class="col s1">6</div>
+<div id="calenderBlock" class="col s1">7</div>
+
+<div id="calenderBlock" class="col s2">8</div>
+<div id="calenderBlock" class="col s2">9</div>
+<div id="calenderBlock" class="col s2">10</div>
+<div id="calenderBlock" class="col s2">11</div>
+<div id="calenderBlock" class="col s2">12</div>
+<div id="calenderBlock" class="col s1">13</div>
+<div id="calenderBlock" class="col s1">14</div>
+
+<div id="calenderBlock" class="col s2">15</div>
+<div id="calenderBlock" class="col s2">16</div>
+<div id="calenderBlock" class="col s2">17</div>
+<div id="calenderBlock" class="col s2">18</div>
+<div id="calenderBlock" class="col s2">19</div>
+<div id="calenderBlock" class="col s1">20</div>
+<div id="calenderBlock" class="col s1">21</div>
+
+<div id="calenderBlock" class="col s2">22</div>
+<div id="calenderBlock" class="col s2">23</div>
+<div id="calenderBlock" class="col s2">24</div>
+<div id="calenderBlock" class="col s2">25</div>
+<div id="calenderBlock" class="col s2">26</div>
+<div id="calenderBlock" class="col s1">27</div>
+<div id="calenderBlock" class="col s1">28</div>
+
+<div id="calenderBlock" class="col s2">29</div>
+<div id="calenderBlock" class="col s2">30</div>
+<div id="calenderBlock" class="col s2">31</div>
+<div id="calenderBlock" class="col s2"></div>
+<div id="calenderBlock" class="col s2"></div>
+<div id="calenderBlock" class="col s1"></div>
+<div id="calenderBlock" class="col s1"></div>
+</div>
+
+<div id="Csep" class="row calender">
+<div id="calenderHead" class="col s2">Monday</div>
+<div id="calenderHead" class="col s2">Tuesday</div>
+<div id="calenderHead" class="col s2">Wednesday</div>
+<div id="calenderHead" class="col s2">Thursday</div>
+<div id="calenderHead" class="col s2">Friday</div>
+<div id="calenderHead" class="col s1">Saturday</div>
+<div id="calenderHead" class="col s1">Sunday</div>
+
+<div id="calenderBlock" class="col s2"></div>
+<div id="calenderBlock" class="col s2"></div>
+<div id="calenderBlock" class="col s2"></div>
+<div id="calenderBlock" class="col s2">1</div>
+<div id="calenderBlock" class="col s2">2</div>
+<div id="calenderBlock" class="col s1">3</div>
+<div id="calenderBlock" class="col s1">4</div>
+
+<div id="calenderBlock" class="col s2">5</div>
+<div id="calenderBlock" class="col s2">6</div>
+<div id="calenderBlock" class="col s2">7</div>
+<div id="calenderBlock" class="col s2">8</div>
+<div id="calenderBlock" class="col s2">9</div>
+<div id="calenderBlock" class="col s1">10</div>
+<div id="calenderBlock" class="col s1">11</div>
+
+<div id="calenderBlock" class="col s2">12</div>
+<div id="calenderBlock" class="col s2">13</div>
+<div id="calenderBlock" class="col s2">14</div>
+<div id="calenderBlock" class="col s2">15</div>
+<div id="calenderBlock" class="col s2">16</div>
+<div id="calenderBlock" class="col s1">17</div>
+<div id="calenderBlock" class="col s1">18</div>
+
+<div id="calenderBlock" class="col s2">19</div>
+<div id="calenderBlock" class="col s2">20</div>
+<div id="calenderBlock" class="col s2">21</div>
+<div id="calenderBlock" class="col s2">22</div>
+<div id="calenderBlock" class="col s2">23</div>
+<div id="calenderBlock" class="col s1">24</div>
+<div id="calenderBlock" class="col s1">25</div>
+
+<div id="calenderBlock" class="col s2">26</div>
+<div id="calenderBlock" class="col s2">27</div>
+<div id="calenderBlock" class="col s2">28</div>
+<div id="calenderBlock" class="col s2">29</div>
+<div id="calenderBlock" class="col s2">30</div>
+<div id="calenderBlock" class="col s1"></div>
+<div id="calenderBlock" class="col s1"></div>
+</div>
+
+<div id="Coct" class="row calender">
+<div id="calenderHead" class="col s2">Monday</div>
+<div id="calenderHead" class="col s2">Tuesday</div>
+<div id="calenderHead" class="col s2">Wednesday</div>
+<div id="calenderHead" class="col s2">Thursday</div>
+<div id="calenderHead" class="col s2">Friday</div>
+<div id="calenderHead" class="col s1">Saturday</div>
+<div id="calenderHead" class="col s1">Sunday</div>
+
+<div id="calenderBlock" class="col s2"></div>
+<div id="calenderBlock" class="col s2"></div>
+<div id="calenderBlock" class="col s2"></div>
+<div id="calenderBlock" class="col s2"></div>
+<div id="calenderBlock" class="col s2"></div>
+<div id="calenderBlock" class="col s1">1</div>
+<div id="calenderBlock" class="col s1">2</div>
+
+<div id="calenderBlock" class="col s2">3</div>
+<div id="calenderBlock" class="col s2">4</div>
+<div id="calenderBlock" class="col s2">5</div>
+<div id="calenderBlock" class="col s2">6</div>
+<div id="calenderBlock" class="col s2">7</div>
+<div id="calenderBlock" class="col s1">8</div>
+<div id="calenderBlock" class="col s1">9</div>
+
+<div id="calenderBlock" class="col s2">10</div>
+<div id="calenderBlock" class="col s2">11</div>
+<div id="calenderBlock" class="col s2">12</div>
+<div id="calenderBlock" class="col s2">13</div>
+<div id="calenderBlock" class="col s2">14</div>
+<div id="calenderBlock" class="col s1">15</div>
+<div id="calenderBlock" class="col s1">16</div>
+
+<div id="calenderBlock" class="col s2">17</div>
+<div id="calenderBlock" class="col s2">18</div>
+<div id="calenderBlock" class="col s2">19</div>
+<div id="calenderBlock" class="col s2">20</div>
+<div id="calenderBlock" class="col s2">21</div>
+<div id="calenderBlock" class="col s1">22</div>
+<div id="calenderBlock" class="col s1">23</div>
+
+<div id="calenderBlock" class="col s2">24</div>
+<div id="calenderBlock" class="col s2">25</div>
+<div id="calenderBlock" class="col s2">26</div>
+<div id="calenderBlock" class="col s2">27</div>
+<div id="calenderBlock" class="col s2">28</div>
+<div id="calenderBlock" class="col s1">29</div>
+<div id="calenderBlock" class="col s1">30</div>
+
+<div id="calenderBlock" class="col s2">31</div>
+<div id="calenderBlock" class="col s2"></div>
+<div id="calenderBlock" class="col s2"></div>
+<div id="calenderBlock" class="col s2"></div>
+<div id="calenderBlock" class="col s2"></div>
+<div id="calenderBlock" class="col s1"></div>
+<div id="calenderBlock" class="col s1"></div>
+</div>
+
+<div id="Cnov" class="row calender">
+<div id="calenderHead" class="col s2">Monday</div>
+<div id="calenderHead" class="col s2">Tuesday</div>
+<div id="calenderHead" class="col s2">Wednesday</div>
+<div id="calenderHead" class="col s2">Thursday</div>
+<div id="calenderHead" class="col s2">Friday</div>
+<div id="calenderHead" class="col s1">Saturday</div>
+<div id="calenderHead" class="col s1">Sunday</div>
+
+<div id="calenderBlock" class="col s2"></div>
+<div id="calenderBlock" class="col s2">1</div>
+<div id="calenderBlock" class="col s2">2</div>
+<div id="calenderBlock" class="col s2">3</div>
+<div id="calenderBlock" class="col s2">4</div>
+<div id="calenderBlock" class="col s1">5</div>
+<div id="calenderBlock" class="col s1">6</div>
+
+<div id="calenderBlock" class="col s2">7</div>
+<div id="calenderBlock" class="col s2">8</div>
+<div id="calenderBlock" class="col s2">9</div>
+<div id="calenderBlock" class="col s2">10</div>
+<div id="calenderBlock" class="col s2">11</div>
+<div id="calenderBlock" class="col s1">12</div>
+<div id="calenderBlock" class="col s1">13</div>
+
+<div id="calenderBlock" class="col s2">14</div>
+<div id="calenderBlock" class="col s2">15</div>
+<div id="calenderBlock" class="col s2">16</div>
+<div id="calenderBlock" class="col s2">17</div>
+<div id="calenderBlock" class="col s2">18</div>
+<div id="calenderBlock" class="col s1">19</div>
+<div id="calenderBlock" class="col s1">20</div>
+
+<div id="calenderBlock" class="col s2">21</div>
+<div id="calenderBlock" class="col s2">22</div>
+<div id="calenderBlock" class="col s2">23</div>
+<div id="calenderBlock" class="col s2">24</div>
+<div id="calenderBlock" class="col s2">25</div>
+<div id="calenderBlock" class="col s1">26</div>
+<div id="calenderBlock" class="col s1">27</div>
+
+<div id="calenderBlock" class="col s2">28</div>
+<div id="calenderBlock" class="col s2">29</div>
+<div id="calenderBlock" class="col s2">30</div>
+<div id="calenderBlock" class="col s2"></div>
+<div id="calenderBlock" class="col s2"></div>
+<div id="calenderBlock" class="col s1"></div>
+<div id="calenderBlock" class="col s1"></div>
+</div>
+
+<div id="Cdec" class="row calender">
+<div id="calenderHead" class="col s2">Monday</div>
+<div id="calenderHead" class="col s2">Tuesday</div>
+<div id="calenderHead" class="col s2">Wednesday</div>
+<div id="calenderHead" class="col s2">Thursday</div>
+<div id="calenderHead" class="col s2">Friday</div>
+<div id="calenderHead" class="col s1">Saturday</div>
+<div id="calenderHead" class="col s1">Sunday</div>
+
+<div id="calenderBlock" class="col s2"></div>
+<div id="calenderBlock" class="col s2"></div>
+<div id="calenderBlock" class="col s2"></div>
+<div id="calenderBlock" class="col s2">1</div>
+<div id="calenderBlock" class="col s2">2</div>
+<div id="calenderBlock" class="col s1">3</div>
+<div id="calenderBlock" class="col s1">4</div>
+
+<div id="calenderBlock" class="col s2">5</div>
+<div id="calenderBlock" class="col s2">6</div>
+<div id="calenderBlock" class="col s2">7</div>
+<div id="calenderBlock" class="col s2">8</div>
+<div id="calenderBlock" class="col s2">9</div>
+<div id="calenderBlock" class="col s1">10</div>
+<div id="calenderBlock" class="col s1">11</div>
+
+<div id="calenderBlock" class="col s2">12</div>
+<div id="calenderBlock" class="col s2">13</div>
+<div id="calenderBlock" class="col s2">14</div>
+<div id="calenderBlock" class="col s2">15</div>
+<div id="calenderBlock" class="col s2">16</div>
+<div id="calenderBlock" class="col s1">17</div>
+<div id="calenderBlock" class="col s1">18</div>
+
+<div id="calenderBlock" class="col s2">19</div>
+<div id="calenderBlock" class="col s2">20</div>
+<div id="calenderBlock" class="col s2">21</div>
+<div id="calenderBlock" class="col s2">22</div>
+<div id="calenderBlock" class="col s2">23</div>
+<div id="calenderBlock" class="col s1">24</div>
+<div id="calenderBlock" class="col s1">25</div>
+
+<div id="calenderBlock" class="col s2">26</div>
+<div id="calenderBlock" class="col s2">27</div>
+<div id="calenderBlock" class="col s2">28</div>
+<div id="calenderBlock" class="col s2">29</div>
+<div id="calenderBlock" class="col s2">30</div>
+<div id="calenderBlock" class="col s1">31</div>
+<div id="calenderBlock" class="col s1"></div>
 </div>
 </div>
-<div id="eventList" class="row" style='overflow-y: auto'>
-  <button id="show" class="btn col s12" onClick="initialize2()">Show Map</button>
-<ul id="list" >
-  <li><div id="map_canvasList" class="col s12" ><div></li>
-</ul>
-</div>
-
-<footer class="page-footer grey darken-2">
-    <div class="ssk-group">
-      <ul>
-        <li class="shareIcon">
-          <a href="http://www.facebook.com" class="ssk ssk-facebook"></a>
-
-        </li>
-        <li class="shareIcon">
-
-          <a href="http://www.twitter.com" class="ssk ssk-twitter"></a>
-        </li>
-        <li class="shareIcon">
-
-          <a href="http://www.googleplus.com" class="ssk ssk-google-plus"></a>
-        </li>
-        <li class="shareIcon">
-
-          <a href="http://www.pinterest.com" class="ssk ssk-pinterest"></a>
-        </li>
-        <li class="shareIcon">
-          <a href="http://www.tumblr.com" class="ssk ssk-tumblr"></a>
-
-        </li>
-      </ul>
 
 
 
 
 
-    </div>
-
-    <p class="grey-text text-lighten-4" id="footer">Created By: ArachNerd Web Development</p>
-</footer>
-<!-- <script src="js/events.js"></script> -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
-  <script src="js/events.js"></script>
-  <script>
-  $("#submit").click(function(){
-      var calenderContainer = document.getElementById("calender-container");
-  var eventName = (document.getElementById("eventName").value);
-  var date = (document.getElementById("date").value);
-  var hour = (document.getElementById("hour").value);
-  var address = (document.getElementById("location").value)
-    var minute = (document.getElementById("minute").value);
-  var description = (document.getElementById("desc").value);
-  if(eventName == "" || date == "" || hour == "" || address == "" || minute == "" || description == ""){
-    alert("There are empty Fields!");
-  }
-  else {
-    if(calenderContainer.style.display == "none"){
-      calenderContainer.style.display = "block";
-    }
-    else{
-      calenderContainer.style.display = "none";
-    }
-
-    $("#list").append($('<li id="add" class="col s6">').text(address ));
-  $("#list").append($('<li id="inputN" class="col s12">').text("Event Name: " + eventName ));
-  $("#list").append($('<li id="inputN" class="col s12">').text("Event Description: " + description ));
-    $("#list").append($('<li id="inputN" class="col s6">').text("Event Date: " + date ));
-      $("#list").append($('<li id="inputN" class="col s6">').text("Event Time: " + hour + ":" + minute ));
-      $("#list").append($('<li id="inputS" class="col s12">').text("Location: " + address ));
-      // $("#list").append($('<button id="show" class="btn" onClick="initialize2()">').text("Show Map"));
-// $("#list").append($('<button id="close" class="btn"  >').text("Close"));
-      // $("#list").append($('<div id="map_canvasList" class="col s6" >').text(""));
-$('#eventName').val('')
-$('#date').val('')
-$('#hour').val('')
-$('#location').val('')
-$('#minute').val('')
-$('#desc').val('')
-}
-  });
-
-  </script>
-<script>
-var geocoder;
-var address = document.getElementById("location").value;
-geocoder = new google.maps.Geocoder();
- geocoder.geocode({
-  'address': address
-});
-function addmarker() {
-  console.log(geocoder);
-    var marker = new google.maps.Marker({
-        position: geocoder,
-        title: address,
-        draggable: true,
-        map: map2
-    });
-    map.setCenter(marker.getPosition())
-}
 
 
 
-$("addMarker").click(function(){
-  addmarker(geocoder)
 
-});
-</script>
+
+
+
+
+
+  <footer class="page-footer grey darken-2">
+      <div class="ssk-group">
+        <ul>
+          <li class="shareIcon">
+            <a href="http://www.facebook.com" class="ssk ssk-facebook"></a>
+
+          </li>
+          <li class="shareIcon">
+
+            <a href="http://www.twitter.com" class="ssk ssk-twitter"></a>
+          </li>
+          <li class="shareIcon">
+
+            <a href="http://www.googleplus.com" class="ssk ssk-google-plus"></a>
+          </li>
+          <li class="shareIcon">
+
+            <a href="http://www.pinterest.com" class="ssk ssk-pinterest"></a>
+          </li>
+          <li class="shareIcon">
+            <a href="http://www.tumblr.com" class="ssk ssk-tumblr"></a>
+
+          </li>
+        </ul>
+
+
+
+
+
+      </div>
+
+      <p class="grey-text text-lighten-4" id="footer">Created By: ArachNerd Web Development</p>
+  </footer>
+  <!-- <script src="js/events.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <script src="js/social-share-kit.min.js"></script>
     <script>
-    var geocoder;
-    var map;
-    var map2;
+    var Cmonth = document.getElementById("Cmonth");
+    var jan = document.getElementById("Cjan");
+    var feb = document.getElementById("Cfeb");
+    var mar = document.getElementById("Cmar");
+    var apr = document.getElementById("Capr");
+    var may = document.getElementById("Cmay");
+    var jun = document.getElementById("Cjun");
+    var jul = document.getElementById("Cjul");
+    var aug = document.getElementById("Caug");
+    var sep = document.getElementById("Csep");
+    var oct = document.getElementById("Coct");
+    var nov = document.getElementById("Cnov");
+    var dec = document.getElementById("Cdec");
+$("#Next").click(function(){
+  // if(Cmonth.innerHTML == "currentMonthSyntax"){
+  //   CURRENTMONTH.style.display = "none";
+  //   NEXTMONTH.style.display = "block";
+  //   Cmonth.innerHTML = "NEXTMONTHSYNTAX";
+  // }
+  if(Cmonth.innerHTML == "May 2016"){
+    may.style.display = "none";
+    jun.style.display = "block";
+    Cmonth.innerHTML = "June 2016";
+  }
+else if(jan.style.display == "block"){
+  jan.style.display = "none";
+  feb.style.display = "block";
+  Cmonth.innerHTML = "February 2016";
+}
+else if(feb.style.display == "block"){
+  feb.style.display = "none";
+  mar.style.display = "block";
+  Cmonth.innerHTML = "March 2016";
+}
+else if(mar.style.display == "block"){
+  mar.style.display = "none";
+  apr.style.display = "block";
+  Cmonth.innerHTML = "April 2016";
+}
+else if(apr.style.display == "block"){
+  apr.style.display = "none";
+  may.style.display = "block";
+  Cmonth.innerHTML = "May 2016";
+}
+else if(may.style.display == "block"){
+  may.style.display = "none";
+  jun.style.display = "block";
+  Cmonth.innerHTML = "June 2016";
+}
+else if(jun.style.display == "block"){
+  jun.style.display = "none";
+  jul.style.display = "block";
+  Cmonth.innerHTML = "July 2016";
+}
+else if(jul.style.display == "block"){
+  jul.style.display = "none";
+  aug.style.display = "block";
+  Cmonth.innerHTML = "August 2016";
+}
+else if(aug.style.display == "block"){
+  aug.style.display = "none";
+  sep.style.display = "block";
+  Cmonth.innerHTML = "September 2016";
+}
+else if(sep.style.display == "block"){
+  sep.style.display = "none";
+  oct.style.display = "block";
+  Cmonth.innerHTML = "October 2016";
+}
+else if(oct.style.display == "block"){
+  oct.style.display = "none";
+  nov.style.display = "block";
+  Cmonth.innerHTML = "November 2016";
+}
+else if(nov.style.display == "block"){
+  nov.style.display = "none";
+  dec.style.display = "block";
+  Cmonth.innerHTML = "December 2016";
+}
+else if(dec.style.display == "block"){
+  dec.style.display = "none";
+  jan.style.display = "block";
+  Cmonth.innerHTML = "January 2016";
+}
+});
+    </script>
+    <script>
+    var Cmonth = document.getElementById("Cmonth");
+    var jan = document.getElementById("Cjan");
+    var feb = document.getElementById("Cfeb");
+    var mar = document.getElementById("Cmar");
+    var apr = document.getElementById("Capr");
+    var may = document.getElementById("Cmay");
+    var jun = document.getElementById("Cjun");
+    var jul = document.getElementById("Cjul");
+    var aug = document.getElementById("Caug");
+    var sep = document.getElementById("Csep");
+    var oct = document.getElementById("Coct");
+    var nov = document.getElementById("Cnov");
+    var dec = document.getElementById("Cdec");
+$("#Previous").click(function(){
+  // if(Cmonth.innerHTML == "currentMonthSyntax"){
+  //   INSERTMONTH.style.display = "none";
+  //   PREVIOUSMONTH.style.display = "block";
+  //   Cmonth.innerHTML = "PREVIOUSMONTHSYNTAX";
+  // }
+  if(Cmonth.innerHTML == "May 2016"){
+    may.style.display = "none";
+    apr.style.display = "block";
+    Cmonth.innerHTML = "April 2016";
+  }
+  else if(jan.style.display == "block"){
+    jan.style.display = "none";
+    dec.style.display = "block";
+    Cmonth.innerHTML = "December 2016";
+  }
+  else if(feb.style.display == "block"){
+    feb.style.display = "none";
+    jan.style.display = "block";
+    Cmonth.innerHTML = "January 2016";
+  }
+  else if(mar.style.display == "block"){
+    mar.style.display = "none";
+    feb.style.display = "block";
+    Cmonth.innerHTML = "February 2016";
+  }
+  else if(apr.style.display == "block"){
+    apr.style.display = "none";
+    mar.style.display = "block";
+    Cmonth.innerHTML = "March 2016";
+  }
+  else if(may.style.display == "block"){
+    may.style.display = "none";
+    apr.style.display = "block";
+    Cmonth.innerHTML = "April 2016";
+  }
+  else if(jun.style.display == "block"){
+    jun.style.display = "none";
+    may.style.display = "block";
+    Cmonth.innerHTML = "May 2016";
+  }
+  else if(jul.style.display == "block"){
+    jul.style.display = "none";
+    jun.style.display = "block";
+    Cmonth.innerHTML = "June 2016";
+  }
+  else if(aug.style.display == "block"){
+    aug.style.display = "none";
+    jul.style.display = "block";
+    Cmonth.innerHTML = "July 2016";
+  }
+  else if(sep.style.display == "block"){
+    sep.style.display = "none";
+    aug.style.display = "block";
+    Cmonth.innerHTML = "August 2016";
+  }
+  else if(oct.style.display == "block"){
+    oct.style.display = "none";
+    sep.style.display = "block";
+    Cmonth.innerHTML = "September 2016";
+  }
+  else if(nov.style.display == "block"){
+    nov.style.display = "none";
+    oct.style.display = "block";
+    Cmonth.innerHTML = "October 2016";
+  }
+  else if(dec.style.display == "block"){
+    dec.style.display = "none";
+    nov.style.display = "block";
+    Cmonth.innerHTML = "November   2016";
+  }
+});
 
-    function initialize() {
-
-      var address = document.getElementById("location").value ;
-      geocoder = new google.maps.Geocoder();
-      var latlng = new google.maps.LatLng(-34.397, 150.644);
-      var myOptions = {
-        zoom: 8,
-        center: latlng,
-        mapTypeControl: true,
-        mapTypeControlOptions: {
-          style: google.maps.MapTypeControlStyle.DROPDOWN_MENU
-        },
-        navigationControl: true,
-        mapTypeId: google.maps.MapTypeId.ROADMAP
-      };
-      map = new google.maps.Map(document.getElementById("map_canvas", "map_canvasList"), myOptions);
-      if (geocoder) {
-        geocoder.geocode({
-          'address': address
-        }, function(results, status) {
-          if (status == google.maps.GeocoderStatus.OK) {
-            if (status != google.maps.GeocoderStatus.ZERO_RESULTS) {
-
-              map.setCenter(results[0].geometry.location);
-
-              var infowindow = new google.maps.InfoWindow({
-                content: '<b>' + address + '</b>',
-                size: new google.maps.Size(150, 50)
-              });
-
-              var marker = new google.maps.Marker({
-                position: results[0].geometry.location,
-                map: map,
-                title: address
-              });
-              google.maps.event.addListener(marker, 'click', function() {
-                infowindow.open(map, marker);
-              });
-
-            } else {
-
-              alert("No results found");
-            }
-          } else {
-
-            alert("Geocode was not successful for the following reason: " + status);
-          }
-        });
-      }
-    }
-    google.maps.event.addDomListener(window, 'load', initialize);
-
-    function initialize2(){
-      var mapBox = document.getElementById("map_canvasList");
-      if(mapBox.style.display = "none"){
-        mapBox.style.display = "block";
-      }
-
-            var address = "Welgemoed, Cape Town" ;
-            geocoder = new google.maps.Geocoder();
-            var latlng = new google.maps.LatLng(-34.397, 150.644);
-            var myOptions = {
-              zoom: 70,
-              center: latlng,
-              mapTypeControl: true,
-              mapTypeControlOptions: {
-                style: google.maps.MapTypeControlStyle.DROPDOWN_MENU
-              },
-              navigationControl: true,
-              mapTypeId: google.maps.MapTypeId.ROADMAP
-            };
-            map2 = new google.maps.Map(document.getElementById("map_canvasList"), myOptions);
-            if (geocoder) {
-              geocoder.geocode({
-                'address': address
-              }, function(results, status) {
-                if (status == google.maps.GeocoderStatus.OK) {
-                  if (status != google.maps.GeocoderStatus.ZERO_RESULTS) {
-
-                    map.setCenter(results[0].geometry.location);
-
-                    var infowindow = new google.maps.InfoWindow({
-                      content: '<b>' + address + '</b>',
-                      size: new google.maps.Size(150, 50)
-                    });
-
-                    // var marker = new google.maps.Marker({
-                    //   position: results[0].geometry.location,
-                    //   map: map,
-                    //   title: address
-                    // });
-                    google.maps.event.addListener(marker, 'click', function() {
-                      infowindow.open(map, marker);
-                    });
-
-                  } else {
-
-                    alert("No results found");
-                  }
-                } else {
-
-                  alert("Geocode was not successful for the following reason: " + status);
-                }
-              });
-            }
-
-          }
-          google.maps.event.addDomListener(window, 'load', initialize2);
-
-
-</script>
-<script src="js/social-share-kit.min.js"></script>
-  <!-- <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places"> -->
-   <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
-</body>
+    </script>
+  </body>
+  </html>
