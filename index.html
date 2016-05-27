@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
     <link rel="stylesheet" href="css/social-share-kit.css" type="text/css">
     <link href="css/main.css" type="text/css" rel="stylesheet">
-    <link rel="icon" src="images/logo.jpg" type="image/x-icon">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
 
@@ -23,10 +22,10 @@
 
         <div class="nav-wrapper grey darken-2">
 
-            <a href="index.html" class="brand-logo">SURVIVALUTIONISM</a>
+            <a href="index.html" class="brand-logo hide-on-med-and-down">SURVIVALUTIONISM</a>
 
-            <ul id="nav-mobile" class="right hide-on-med-and-down">
-
+            <ul id="nav-mobile" class="right ">
+<!-- hide-on-med-and-down -->
                 <li><a id="home" href="index.html">Home</a></li>
 
                 <li><a id="gallery" href="Gallery.html">Gallery</a></li>
@@ -36,8 +35,9 @@
                 <li><a id="contact" href="Contact%20us.html">Contact Us</a></li>
 
             </ul>
-
+        
         </div>
+
 
     </nav>
 
@@ -90,6 +90,7 @@
         </footer>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <!-- <script src="js/init.js"></script> -->
 
     <script type="text/javascript">
         stLight.options({
@@ -99,16 +100,12 @@
             hashAddressBar: false
         });
     </script>
-
-
     <script src="js/social-share-kit.min.js"></script>
+<script>
+  $('.button-collapse').sideNav('show');
 
-
-
-
-
-
-
+    $('.button-collapse').sideNav('hide');
+</script>
 
 
 
