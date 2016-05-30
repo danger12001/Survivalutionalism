@@ -90,11 +90,7 @@ body{
     display: block;
     margin-left: auto;
     margin-right: auto;
-
-background: url(../images/background1.jpg);
-
-
-
+    background: url(../images/background1.jpg);
 
 }
 
@@ -230,9 +226,9 @@ border: 1px solid black;
   width: 100%;
   height: 100px;
   /*background-color: grey;*/
-  /*line-height: 100px;*/
+  line-height: 100px;
   color: white;
-  font-size: 50px;
+  font-size: 25px;
   text-align: center;
 }
 .calender-container {
@@ -243,7 +239,7 @@ border: 1px solid black;
     margin-right: auto;
     width: 50%;
     background-color: black;
-  
+
 }
 .calender {
 width: 100%;
